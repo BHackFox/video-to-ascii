@@ -56,8 +56,8 @@ def ascii_generator(img):
 
     pixels = img.getdata()
 
-    chars = ["B","S","#","&","@","$","%","*","!",":",".","/","\\","-"," "," "," "," "," "]
-    new_pixels = [chars[pixel//len(chars)] for pixel in pixels]
+    chars = list('$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~i!lI;:,\"^`". ') #["B","S","#","&","@","$","%","*","!",":",".","/","\\","-"," "," "," "," "," "]
+    new_pixels = [chars[pixel//40] for pixel in pixels]
     new_pixels = ''.join(new_pixels)
 
     new_pixels_count = len(new_pixels)
